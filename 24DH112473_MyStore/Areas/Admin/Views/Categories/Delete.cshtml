@@ -1,33 +1,37 @@
 ﻿@model _24DH112473_MyStore.Models.Category
-
 @{
     ViewBag.Title = "Delete";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
+<h2 class="bg-success">XÓA DANH MỤC</h2>
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Category</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CategoryName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CategoryName)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
+        <div class="dl-horizontal">
+            <hr />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <h4 class="danger">Bạn có chắc chắn muốn xóa danh mục này không?</h4>
+                </div>
+            </div>
+            <div class="form-group">
+                
+                    <div class="control-label col-md-2">Tên danh mục</div>
+                    <div class="col-md-10">
+                        @*Giá trị của trường category*@
+                        @Html.DisplayFor(model => model.CategoryName)
+                    </div>
+                
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Delete" class="btn btn-dark" />
+                        @Html.ActionLink("Quay lại Danh sách", "index", null, new { @class = "btn btn-dark" })
+                    </div>
+                </div>
+            </div>
         </div>
     }
 </div>
