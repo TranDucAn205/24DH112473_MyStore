@@ -62,16 +62,16 @@ namespace _24DH112473_MyStore.Areas.Admin.Controllers
         public ActionResult Edit(int? id)
         {
             Details(id);
-            //if (id == null)
-            //{
-            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            //}
-            //Category category = db.Categories.Find(id);
-            //if (category == null)
-            //{
-            //    return HttpNotFound();
-            //}
-            //return View(category);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Category category = db.Categories.Find(id);
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+            return View(category);
         }
 
         // POST: Admin/Categories/Edit/5
@@ -94,16 +94,16 @@ namespace _24DH112473_MyStore.Areas.Admin.Controllers
         public ActionResult Delete(int? id)
         {
             Details(id);
-            //if (id == null)
-            //{
-            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            //}
-            //Category category = db.Categories.Find(id);
-            //if (category == null)
-            //{
-            //    return HttpNotFound();
-            //}
-            //return View(category);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Category category = db.Categories.Find(id);
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+            return View(category);
         }
 
         // POST: Admin/Categories/Delete/5

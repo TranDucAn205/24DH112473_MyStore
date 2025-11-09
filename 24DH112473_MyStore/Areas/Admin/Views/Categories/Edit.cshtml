@@ -12,7 +12,7 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal for">     
+    <div class="form-horizontal for">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.CategoryID)
@@ -20,4 +20,7 @@
         @*Nhúng partial view vào form cha*@
         @Html.Partial("PVCreateEditCategory", Model)
     </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
 }
