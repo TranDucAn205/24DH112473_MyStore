@@ -29,6 +29,9 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>*@
+
 
     <style>
         /* Basic styling for the menu */
@@ -116,60 +119,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="icon-bar"><i class="fas fa-shopping-cart"></i>@Html.ActionLink("Giỏ hàng", "Index", "Cart")"</div>
+                    <div class="icon-bar"><i class="fas fa-shopping-cart"></i>@Html.ActionLink("Giỏ hàng", "Index", "Cart")</div>
                 </button>
-                <a href="@Url.Action("Index", "Home")" class="navbar-brand"><img src="~/Content/Images/logo.png" style="max-height:100px;" /></a>
-            </div>
-
-            @*<div class="navbar-collapse collapse navbar-right">
-                <ul class="nav navbar-nav">
-
-                    <li>
-                        <div style="position:relative;">
-                            <i class="fas fa-home"></i>
-                            @Html.ActionLink("Trang chủ", "Index", "Home")
-                        </div>
-                    </li>*@
-
-                    @*<li class="dropdown">
-                            <div style="position:relative;">
-                                <i class="fas fa-user"></i>
-                                <a href="javascript:void(0)" id="account-name">
-                                    @if (ViewBag.pnmodel.IsLoggedIn)
-                                    {
-                                        <text>Hello, </text>@ViewBag.pnmodel.Username
-                                    }
-                                    else
-                                    {
-                                        <text>Tài khoản</text>
-                                    }
-                                </a>
-                            </div>
-
-                            <div class="dropdown-content">
-                                @if (ViewBag.pnmodel.IsLoggedIn)
-                                {
-                                    <a href="@Url.Action("Profile", "Account")">Thông tin tài khoản</a>
-                                    <a href="@Url.Action("OrderHistory", "Order")">Lịch sử mua hàng</a>
-                                    <a href="@Url.Action("Logout", "Account")">Đăng xuất</a>
-                                }
-                                else
-                                {
-                                    <a href="@Url.Action("Register", "Account")">Đăng ký</a>
-                                    <a href="@Url.Action("Login", "Account")">Đăng nhập</a>
-                                }
-                            </div>
-                        </li>*@
-
-                    @*<li>
-                        <a href="@Url.Action("Index2", "Cart")">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span id="cart-count">@ViewBag.pnmodel.CartCount</span>
-                        </a>
-                    </li>*@
-
-                @*</ul>
-            </div>*@
+                <a href="@Url.Action("Index", "Home")" class="navbar-brand"><img src="~/Content/Images/logo-removebg-preview.png" style="max-height:90px;" /></a>
+            </div>          
         </div>
     </div>
 

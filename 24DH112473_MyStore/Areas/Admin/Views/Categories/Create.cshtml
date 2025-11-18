@@ -4,8 +4,13 @@
     ViewBag.Title = "Create";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
+@*<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>*@
 
-<h2 class="bg-success">THÊM DANH MỤC</h2>
+<h2 class="bg-light">THÊM DANH MỤC</h2>
 
 
 @using (Html.BeginForm()) 
@@ -13,7 +18,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Category</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 

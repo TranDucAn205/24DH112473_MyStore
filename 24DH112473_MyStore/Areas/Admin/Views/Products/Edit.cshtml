@@ -4,10 +4,12 @@
     ViewBag.Title = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
-
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 <h2>Edit</h2>
-
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -18,11 +20,8 @@
         @Html.Partial("PvCreateEditProduct")
     </div>
 }
-
 <div>
-
 </div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
